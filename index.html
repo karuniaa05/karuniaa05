@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebuah Rahasia Manis Untukmu 💕</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            text-align: center; 
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
+        }
+        .content { 
+            display: none; 
+            padding: 20px; 
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            width: 60%;
+        }
+        .content.active { display: block; }
+        .navigation { margin-top: 20px; }
+        button { 
+            padding: 10px 20px; 
+            margin: 5px; 
+            cursor: pointer; 
+            background: #ff758c; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e84393;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Sebuah Rahasia Manis Untukmu 💕</h1>
+    <div id="content-container">
+        <div id="hal1" class="content active">
+            <h2>Rahasia Pertama 🤫</h2>
+            <p>Hai, aku udah lama penasaran sama kamu. 💕</p>
+        </div>
+        <div id="hal2" class="content">
+            <h2>Rahasia Kedua 💕</h2>
+            <p>Setiap hari aku selalu memperhatikanmu diam-diam. 🥰</p>
+        </div>
+        <div id="hal3" class="content">
+            <h2>Rahasia Ketiga ✨</h2>
+            <p>Aku suka cara kamu tersenyum dan bersikap ke orang lain. ❤️</p>
+        </div>
+        <div id="hal4" class="content">
+            <h2>Rahasia Keempat 😆</h2>
+            <p>Aku selalu senang kalau bisa ngobrol dan bercanda sama kamu. 😊</p>
+        </div>
+        <div id="hal5" class="content">
+            <h2>Rahasia Kelima 💖</h2>
+            <p>Aku cuma mau bilang kalau kamu spesial buatku. 😍</p>
+        </div>
+        <div id="hal6" class="content">
+            <h2>Rahasia Keenam 😍</h2>
+            <p>Jadi, aku pengen tanya sesuatu... 💭</p>
+        </div>
+        <div id="hal7" class="content">
+            <h2>Rahasia Ketujuh 😉</h2>
+            <p>Apa aku boleh jadi orang yang lebih dekat di hidupmu? 😊💕</p>
+        </div>
+        <div id="hal8" class="content">
+            <h2>Rahasia Kedelapan 😂</h2>
+            <p>Jangan takut yah, aku nggak makan kamu kok! 😆💖</p>
+        </div>
+        <div id="hal9" class="content">
+            <h2>Rahasia Kesembilan 😜</h2>
+            <p>Buktinya aku nggak curi hati kamu, hehehe! 😜💞</p>
+        </div>
+        <div id="hal10" class="content">
+            <h2>Rahasia Kesepuluh 😏</h2>
+            <p>Lagian nggak mungkin juga kan kamu yang manis dan lucu ini nggak punya cewe? 😏💕</p>
+        </div>
+        <div id="hal11" class="content">
+            <h2>Rahasia Kesebelas 🤭</h2>
+            <p>Atau jangan-jangan... kamu lagi nunggu seseorang yang kayak aku? 😉💘</p>
+        </div>
+        <div id="hal12" class="content">
+            <h2>Rahasia Keduabelas 🌙</h2>
+            <p>Aku sih nggak masalah jadi orang yang kamu pikirin sebelum tidur. 😜✨</p>
+        </div>
+        <div id="hal13" class="content">
+            <h2>Rahasia Ketigabelas 🔥</h2>
+            <p>Percaya deh, aku nggak akan buat kamu bosen kalau dekat aku. 😉🔥</p>
+        </div>
+        <div id="hal14" class="content">
+            <h2>Rahasia Keempatbelas 💘</h2>
+            <p>Yakin nggak mau kasih aku kesempatan buat bikin hari-harimu lebih seru? 😏💖</p>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <button id="nextBtn" onclick="nextPage()">Next 💘</button>
+    </div>
+    
+    <script>
+        let currentPage = 1;
+        let totalPages = 14;
+
+        function showPage(page) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.getElementById('hal' + page).classList.add('active');
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            } else {
+                document.getElementById("content-container").style.display = "none";
+                document.getElementById("title").innerText = "Rahasia sudah selesai! 🎉";
+                document.getElementById("nextBtn").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
